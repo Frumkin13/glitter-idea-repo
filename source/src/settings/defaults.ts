@@ -107,7 +107,7 @@ function normalizeHomeFieldView(value: unknown): HomeFieldView {
 }
 
 function normalizePluginInterfaceLanguage(value: unknown): PluginInterfaceLanguage {
-  if (value === "zh-CN" || value === "en") {
+  if (value === "zh-CN" || value === "en" || value === "ru") {
     return value;
   }
 
