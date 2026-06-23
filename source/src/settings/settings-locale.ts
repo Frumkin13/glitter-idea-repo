@@ -2,7 +2,7 @@
  * 设置页本地化文案表。
  * 负责维护中英文设置文案结构，并根据宿主语言解析当前应使用的文案集合。
  */
-export type SettingsLocale = "zh-CN" | "en";
+export type SettingsLocale = "zh-CN" | "en" | "ru";
 
 // 本地化数据结构。
 type SectionText = {
@@ -410,7 +410,10 @@ export function resolveSettingsLocale(language: string): SettingsLocale {
   if (normalizedLanguage.startsWith("zh")) {
     return "zh-CN";
   }
-
+  
+  if (normalizedLanguage.startsWith("ru")) {
+    return "ru-RU";
+  }
   return "zh-CN";
 }
 
