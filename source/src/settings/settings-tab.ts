@@ -468,6 +468,7 @@ export default class GlitterSettingTab extends PluginSettingTab {
       .addDropdown((dropdown) => {
         dropdown.addOption("zh-CN", "中文");
         dropdown.addOption("en", "English");
+        dropdown.addOption("ru", "Русский");
         dropdown.setValue(this.plugin.settings.interfaceLanguage).onChange(async (value) => {
           if (value !== "zh-CN" && value !== "en") {
             return;
